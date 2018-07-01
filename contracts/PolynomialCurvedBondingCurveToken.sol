@@ -48,7 +48,7 @@ contract PolynomialCurvedBondingCurveToken {
     }
 
     function getMintingPrice(uint256 _numTokens) public view returns(uint256) {
-        return curveIntegral(totalSupply + _numTokens) - poolBalance; // why minus here???
+        return curveIntegral(totalSupply + _numTokens) - poolBalance;
     }
 
     // burning tokens >> eth to return
