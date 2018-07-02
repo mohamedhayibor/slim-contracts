@@ -1,6 +1,7 @@
 pragma solidity ^0.4.24;
 
 // heavily looked at https://github.com/CryptoAgainstHumanity/crypto-against-humanity/blob/master/ethereum/contracts
+// No transfer or trading between accounts only through the smart contract
 
 contract PolynomialCurvedBondingCurveToken {
     uint8 exponent;
