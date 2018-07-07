@@ -30,7 +30,7 @@ contract PolynomialCurvedBondingCurveToken {
     function curveIntegral(uint256 _t) internal returns(uint256) {
         uint256 nexp = exponent + 1;
         // calculate integral t^exponent
-        return PRECISION / nexp * (_t ** nexp) / PRECISION;
+        return ((PRECISION / nexp) * (_t ** nexp)) / PRECISION;
     }
 
     // minting new tokens
