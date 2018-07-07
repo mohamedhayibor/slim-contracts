@@ -5,22 +5,22 @@ pragma solidity ^0.4.24;
 
 contract PolynomialCurvedBondingCurveToken {
     uint8 exponent;
-    // experimenting with 10 million
     uint256 PRECISION;
     uint256 public totalSupply;
     string public name;
     string public symbol;
     uint8 public decimals;
 
+    // amount of wei the smart contract holds
     uint256 public poolBalance;
 
-    constructor(string _name, string _symbol, uint8 _decimals, uint8 _exponent) public {
+    constructor(string _name, string _symbol, uint8 _decimals, uint8 _exponent, uint256 _precision) public {
         totalSupply = 0;
         name = _name;
         symbol = _symbol;
         decimals = _decimals;
-        exponent = _exponent;        // usually use 1
-        PRECISION = 10000000000;     // 10 million
+        exponent = _exponent;        // usually 1
+        PRECISION = _precision;      // example: 10 million
     }
 
     // tokens owned by each address
